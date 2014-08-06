@@ -137,6 +137,10 @@ body {
 	height:800px;
 }
 
+#linkedin-content {
+	text-align: center;
+}
+
 .email-box {
 	position:relative;
 }
