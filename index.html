@@ -98,10 +98,15 @@
 					<div class="content dblue" id="linkedin-content">
 						<script src="//platform.linkedin.com/in.js" type="text/javascript">
 							api_key: 77vwz84ssyjmrn
+							function getID() {
+   IN.API.Profile("me")
+   .result(function(result) { 
+      $("#profile").html('<script type="IN/FullMemberProfile" data-id="' + result.values[0].id + '"></script>');
+      IN.parse(document.getElementById("profile"))
+   })
+}
 						</script>
-						<script type="IN/Login">
-Hello, <?js= firstName ?> <?js= lastName ?>.
-</script>
+						<script type="IN/Login" data-onAuth="getID"></script>
 						<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/cmcewen" data-format="inline"></script>
 					</div>
 					<div class="content row collapse red" id="instagram-content"></div>
