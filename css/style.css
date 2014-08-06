@@ -137,6 +137,10 @@ body {
 	height:800px;
 }
 
+#li-profile {
+	margin:10px;
+}
+
 #linkedin-content {
 	text-align: center;
 }

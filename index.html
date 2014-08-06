@@ -100,7 +100,6 @@
 							api_key: 77vwz84ssyjmrn
 						</script>
 						<div id="li-profile">
-							<script type="IN/FullMemberProfile" data-id="asbGKpSkTB" data-width="300"></script>	
 						</div>
 					</div>
 					<div class="content row collapse red" id="instagram-content"></div>
@@ -141,8 +140,12 @@
 	$("li").click(function() {
 		$('#tabs-row').addClass('collapse');
 	});
-
 	GitHubActivity.feed({ username: "cmcewen", selector: "#github-feed" });
+	$( document ).ready(function() {
+		var string;
+		string = "<script type='IN/FullMemberProfile' data-id='asbGKpSkTB' data-width='" + ($("#linkedin-content").innerWidth() - 20) + "'></script\>";
+		$("#li-profile").html(string);
+	})
 	</script>
 </body>
 </html>
