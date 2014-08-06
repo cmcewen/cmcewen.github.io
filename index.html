@@ -1,0 +1,144 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Connor McEwen's Website</title>
+	<link rel="stylesheet" href="css/foundation.css" />
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="js/vendor/modernizr.js"></script>
+	<pre class="prettyprint">
+		<script type="text/javascript" src="http://connormcewen.tumblr.com/api/read/json"></script>
+	</pre>
+
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+	<link rel="stylesheet" href="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.css">
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+	<script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
+</head>
+<body>
+	<div class="row collapse red">
+		<div class="medium-4 columns">
+			<div class="row collapse">
+				<div class="large-12 columns">
+					<div class="square connor">
+						<div class="name">Connor McEwen</div>
+					</div>
+					<div class="sidebar yellow">
+						I’m a 22 year old technophile currently in Boston. I grew up in Ohio, 
+						graduated from Boston University in Computer Engineering, and lived 
+						in Berlin for a bit working on a startup. I love the Green Bay Packers, 
+						music, startups, and the future.
+					</div>
+					<div class="sidebar green">
+						Home
+					</div>
+					<div class="sidebar dblue">
+						Projects
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="medium-8 columns">
+			<div class="row sqrow" id="tabs-row">
+				<ul class="tabs" data-tab>
+					<li class="active"><a href="#twitter-content">
+						<div class="sqcontainer columns lblue">
+							<div class="square twitter logo">
+							</div>
+						</div>
+					</a></li>
+					<li><a href="#tumblr-content">
+						<div class="sqcontainer columns green">
+							<div class="square tumblr logo">
+							</div>
+						</div>
+					</a></li>
+					<li><a href="#github-content">
+						<div class="sqcontainer columns yellow">
+							<div class="square github logo">
+							</div>
+						</div>
+					</a></li>
+					<li><a href="#linkedin-content">
+						<div class="sqcontainer columns dblue">
+							<div class="square linkedin logo"></div>
+						</div>
+					</a></li>
+					<li><a href="#instagram-content">
+						<div class="sqcontainer columns red">
+							<div class="square instagram logo"></div>
+						</div>
+					</a></li>
+					<li><a href="#email-content">
+						<div class="sqcontainer columns lblue last">
+							<div class="square email logo"></div>
+						</div>
+					</a></li>
+				</ul>
+				<div class="tabs-content">
+					<div class="content active lblue" id="twitter-content">
+						<a class="twitter-timeline" href="https://twitter.com/connormcewen" data-widget-id="497058623684476928">Tweets by @connormcewen</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
+					<div class="content row green" id="tumblr-content">
+						<a href="http://connormcewen.tumblr.com"><h3>Blog posts</h3></a>
+						<script type="text/javascript">
+						for (i = 0; i < 3; i++) {
+							document.write('<a href="' + tumblr_api_read['posts'][i]['url'] + '"><h5 class="subheader">' + 
+								tumblr_api_read['posts'][i]['regular-title'] + '</h5></a> ' +
+								tumblr_api_read['posts'][i]['regular-body']);
+						}
+						</script>
+					</div>
+					<div class="content row yellow" id="github-content">
+						<div id="github-feed"></div>
+					</div>
+					<div class="content dblue" id="linkedin-content">
+						<script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+						<script type="IN/MemberProfile" data-id="http://www.linkedin.com/in/cmcewen" data-format="inline"></script>
+					</div>
+					<div class="content row collapse red" id="instagram-content"></div>
+					<div class="content row lblue" id="email-content">
+						<div class="square email-box">
+							<a class="button secondary email-button" href="mailto:connor.mcewen@gmail.com" target="_blank">Email me!</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script>
+	$(document).foundation();
+	</script>
+	<script src="js/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'user',
+		userId: 1310797904,
+		accessToken: '1310797904.467ede5.1085229be8d448eea0d378059b880367',
+		sortby: 'random',
+		resolution: 'low_resolution',
+		links: 'true',
+		limit: '10',
+		useHttp: 'true',
+		template: '<div class="small-4 columns"><a href="{{link}}"><img src="{{image}}" /></a></div>',
+		target: 'instagram-content'
+	});
+	userFeed.run();
+	</script>
+	<script type="text/javascript">
+	$("li").click(function() {
+		$('#tabs-row').addClass('collapse');
+	});
+
+	GitHubActivity.feed({ username: "cmcewen", selector: "#github-feed" });
+	</script>
+</body>
+</html>

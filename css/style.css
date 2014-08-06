@@ -1,0 +1,150 @@
+li {
+	display:inline;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:white;
+}
+
+body {
+	background: url('../img/sandpaper.png');
+}
+
+.lblue {
+	background-color: #3FB0F4;
+}
+
+.red {
+	background-color: #F95242;
+}
+
+.yellow {
+	background-color: #FE9B0A;
+}
+
+.green {
+	background-color: #90B30F;
+}
+
+.dblue {
+	background-color: #07334E;
+}
+
+.sqcontainer {
+	width: 33.33333%;
+	padding: 0px;
+	transition: all 0.5s ease;
+}
+
+.sqrow.collapse .sqcontainer{
+	width: 16.66667%;
+}
+
+.square {
+	height: 0;
+	padding-bottom: 100%;
+}
+
+.last {
+	float:left !important;
+}
+
+.logo {
+	background-position: center center;
+	background-repeat:no-repeat;
+	background-origin: padding-box;
+	background-size:50%;
+}
+
+.twitter {
+	background-image: url('../img/twitter.png');
+}
+
+.tumblr {
+	background-image: url('../img/tumblr.png');
+}
+
+.github {
+	background-image: url('../img/github.png');
+}
+
+.linkedin {
+	background-image: url('../img/linkedin.png');
+}
+
+.instagram {
+	background-image: url('../img/instagram.png');
+}
+
+.email {
+	background-image: url('../img/email.png');
+}
+
+.connor {
+	background-image: url('../img/connor.png');
+	background-position: center center;
+	background-repeat:no-repeat;
+	background-origin: padding-box;
+	background-size: 100%;
+	position: relative;
+}
+
+.name {
+	font-size: 30px;
+	color: white;
+	font-weight: 100;
+	position: absolute; bottom: 10px; right: 10px;
+}
+
+.sidebar {
+	font-size: 20px;
+	padding: 20px;
+	color: white;
+	font-weight: 100;
+}
+
+.twitter-timeline {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+#tumblr-content {
+	padding: 30px;
+}
+
+#instagram-content {
+	padding: 0px;
+}
+
+#github-content {
+	padding: 20px;
+}
+
+.tabs {
+	margin-top: 0px;
+}
+
+.gha-header {
+	box-sizing: initial;
+}
+
+.gha-footer {
+	box-sizing: initial;
+}
+
+#github-feed {
+	height:800px;
+}
+
+.email-box {
+	position:relative;
+}
+
+.email-button {
+	height:50px;
+	width:200px;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
