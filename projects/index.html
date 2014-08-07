@@ -1,0 +1,88 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Connor McEwen's Website</title>
+	<link rel="stylesheet" href="../css/foundation.css" />
+	<link rel="stylesheet" href="../css/style.css" />
+	<script src="../js/vendor/modernizr.js"></script>
+	<script type="text/javascript" src="http://connormcewen.tumblr.com/api/read/json"></script>
+
+	<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/octicons/2.0.2/octicons.min.css">
+	<link rel="stylesheet" href="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.css">
+
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/mustache.js/0.7.2/mustache.min.js"></script>
+	<script type="text/javascript" src="http://caseyscarborough.github.io/github-activity/github-activity-0.1.0.min.js"></script>
+</head>
+<body>
+	<div class="row collapse" data-equalizer>
+		<div class="medium-4 columns red" data-equalizer-watch>
+			<div class="row collapse">
+				<div class="large-12 columns">
+					<div class="square connor">
+						<div class="grad">
+							<div class="name">Connor McEwen</div>
+						</div>
+					</div>
+					<div class="sidebar yellow">
+						I’m a 22 year old technophile currently in Boston. I grew up in Ohio, 
+						graduated from Boston University in Computer Engineering, and lived 
+						in Berlin for a bit working on a startup. I love the Green Bay Packers, 
+						music, startups, and the future.
+					</div>
+					<a href="/"><div class="sidebar green">
+						Home
+					</div></a>
+					<a href="/projects"><div class="sidebar dblue">
+						Projects
+					</div></a>
+				</div>
+			</div>
+		</div>
+		<div class="medium-8 columns safari-sucks" data-equalizer-watch>
+			<div class="row red">
+				<div class="small-12 columns">
+					<h1>Coming soon</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<script src="../js/vendor/jquery.js"></script>
+	<script src="../js/foundation.min.js"></script>
+	<script>
+	$(document).foundation();
+	</script>
+	<script src="../js/instafeed.min.js"></script>
+	<script type="text/javascript">
+
+		// collapse squares when clicked
+		$("li").click(function() {
+			$('#tabs-row').addClass('collapse');
+		});
+
+		//adjust footer size on resize
+		$("li").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', 
+    		function() {
+        	$(document).foundation('equalizer','reflow');
+    });
+    $(document).foundation({
+	    tab: {
+	      callback : function (tab) {
+	        $(document).foundation('equalizer','reflow');
+	      }
+	    }
+	  });
+
+		//set up linkedin widget
+		$( document ).ready(function() {
+
+			//initial footer height
+			$('#filler').height( $('#tabs-row').height() - $('#tab-squares').height());
+		})
+	</script>
+</body>
+</html>
