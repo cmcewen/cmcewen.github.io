@@ -6,6 +6,7 @@
 	<title>Connor McEwen's Website</title>
 	<link rel="stylesheet" href="css/foundation.css" />
 	<link rel="stylesheet" href="css/style.css" />
+	<link rel="shortcut icon" href="../img/favicon.png"
 	<script src="js/vendor/modernizr.js"></script>
 	<script type="text/javascript" src="http://connormcewen.tumblr.com/api/read/json"></script>
 
@@ -40,7 +41,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="medium-8 columns safari-sucks" data-equalizer-watch>
+		<div class="medium-8 columns flleft" data-equalizer-watch>
 			<div class="row sqrow" id="tabs-row">
 				<ul class="tabs" id="tab-squares" data-tab>
 					<li class=""><a href="#twitter-content">
@@ -86,7 +87,7 @@
 					<div class="content row white" id="tumblr-content">
 						<a href="http://connormcewen.tumblr.com"><h3>Blog posts</h3></a>
 						<script type="text/javascript">
-						for (i = 0; i < 3; i++) {
+						for (i = 0; i < 4; i++) {
 							document.write('<a href="' + tumblr_api_read['posts'][i]['url'] + '"><h5 class="subheader">' + 
 								tumblr_api_read['posts'][i]['regular-title'] + '</h5></a> ' +
 								tumblr_api_read['posts'][i]['regular-body']);
@@ -103,7 +104,7 @@
 						<div id="li-profile">
 						</div>
 					</div>
-					<div class="content row collapse" id="instagram-content"></div>
+					<div class="content row collapse red" id="instagram-content"></div>
 					<div class="content row lblue" id="email-content">
 						<div class="square email-box">
 							<a class="button secondary email-button" href="mailto:connor.mcewen@gmail.com" target="_blank">Email me!</a>
@@ -133,7 +134,7 @@
 			links: 'true',
 			limit: '10',
 			useHttp: 'true',
-			template: '<div class="small-4 columns"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></div>',
+			template: '<div class="small-4 columns flleft"><a href="{{link}}" target="_blank"><img src="{{image}}" /></a></div>',
 			target: 'instagram-content'
 		});
 		userFeed.run();

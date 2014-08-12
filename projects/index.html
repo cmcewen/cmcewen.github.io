@@ -6,6 +6,7 @@
 	<title>Connor McEwen's Website</title>
 	<link rel="stylesheet" href="../css/foundation.css" />
 	<link rel="stylesheet" href="../css/style.css" />
+	<link rel="shortcut icon" href="../img/favicon.png">
 	<script src="../js/vendor/modernizr.js"></script>
 	<script type="text/javascript" src="http://connormcewen.tumblr.com/api/read/json"></script>
 
@@ -41,13 +42,174 @@
 			</div>
 		</div>
 		<div class="medium-8 columns safari-sucks" data-equalizer-watch>
-			<div class="row red">
-				<div class="small-12 columns">
-					<h1>Coming soon</h1>
+			<div class="row sqrow white" id="tabs-row">
+				<ul class="tabs" id="tab-squares" data-tab>
+					<li class=""><a href="#cmmnt-content">
+						<div class="sqcontainer columns lblue">
+							<div class="square cmmnt project-logo">
+							</div>
+						</div>
+					</a></li>
+					<li><a href="#drf-content">
+						<div class="sqcontainer columns white">
+							<div class="square drf project-logo">
+							</div>
+						</div>
+					</a></li>
+					<li><a href="#credport-content">
+						<div class="sqcontainer columns yellow">
+							<div class="square credport project-logo">
+							</div>
+						</div>
+					</a></li>
+					<li><a href="#makebu-content">
+						<div class="sqcontainer columns white">
+							<div class="square makebu project-logo"></div>
+						</div>
+					</a></li>
+					<li><a href="#lnsk-content">
+						<div class="sqcontainer columns white">
+							<div class="square lnsk project-logo"></div>
+						</div>
+					</a></li>
+					<li><a href="#senior-content">
+						<div class="sqcontainer columns white last">
+							<div class="square senior project-logo"></div>
+						</div>
+					</a></li>
+				</ul>
+				<div class="tabs-content" id ="tabs-content">
+					<div class="content active red" id="filler">
+					</div>
+					<div class="content white row" id="cmmnt-content">
+						<div class="small-12 columns">
+							<h1>cmmnt</h1>
+							<div class="row">
+								<div class="large-8 columns">
+									<p>cmmnt is a web and mobile application for sharing and discussing links privately
+										You can send a person or group a link to an article, video, tweet, or picture, and
+										start a private conversation around it. There is also a chrome extension to make 
+										sending links easier.
+									</p>
+									<p>cmmnt is built on a Ruby on Rails backend using Zurb Foundation. The chrome extension
+										is just vanilla Javascript. The apps are both native (in Java and Objective-C), but use a
+										hybrid of native navigation and webviews to lay out the content to speed up development
+										time considerably.
+									</p>
+								</div>
+								<div class="large-4 columns">
+									<img src="../img/cmmntscreen.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content white row" id="drf-content">
+						<div class="small-12 columns">
+							<h1>Dorm Room Fund</h1>
+							<div class="row">
+								<div class="large-8 columns">
+									<p>I spend my senior year at BU investing in and helping student-led startups through
+										Dorm Room Fund. DRF is a 500k fund backed by First Round Capital focused solely on students.
+										I was on the first Boston team along with colleagues from other area schools.
+									</p>
+									<p>After spending some time as an entrepreneur, I found it very valuable to get a perspective
+										from the other side of the equation. I also really enjoyed the opportunity to help out my
+										peers since I could really relate to what they were doing. 
+									</p>
+								</div>
+								<div class="large-4 columns">
+									<img src="../img/drfcompanies.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content white row" id="credport-content">
+						<div class="small-12 columns">
+							<h1>Credport</h1>
+							<div class="row">
+								<div class="small-12 columns">
+									<p>Credport was a company that I started with my good friend <a href="http://www.twitter.com/nambrot">Nam</a> during our sophomore year at BU. We were fascinated by the rise of
+										marketplaces and collaborative consumption and believed that we could build a portable
+										reputation to take around the web.
+									</p>
+									<p>We took part in the Summer@Highland program with Highland Capital, and then were 
+										accepted into Startupbootcamp Berlin so we took a leave of absence during our junior year
+										to move to Berlin and work on Credport. We talked to tons of marketplaces and released a
+										product with a few partners, but then realized that we couldn't grow a userbase so
+										we shut the company down and returned to school.
+									</p>
+								</div>
+								<div class="small-12 columns">
+									<img src="../img/nam_credport.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content white row" id="makebu-content">
+						<div class="small-12 columns">
+							<h1>Make_BU</h1>
+							<div class="row">
+								<div class="small-12 columns">
+									<p>After coming back to Boston University, I felt like there was a bit of a lack of a community
+										for people interested in building (software and hardware) products. I started a 
+										<a href="http://www.facebook.com/makebu">weekly meetup</a>
+										at BU, and eventually organized a hackathon in the spring of 2014. We had
+										over 100 attendees and a really great time.
+									</p>
+								</div>
+								<div class="small-12 columns">
+									<img src="../img/makebu-event.jpg">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content white row" id="lnsk-content">
+						<div class="small-12 columns">
+							<h1>Late Night Safety Kit</h1>
+							<div class="row">
+								<div class="small-12 columns">
+									<p>At a hackathon, Battlehack Boston, I built a Late Night Safety Kit with a few friends.
+										It is a mobile application which provides a few different tools for people to feel safe
+										at night, including crime in the local area, a timer to contact people in case you
+										don't make it home, and a tracker. We ended up
+										<a href="http://bostinno.streetwise.co/2014/08/12/winners-of-bostons-paypal-battlehack-2014-paypal-battlehack-2014-date-and-winners/">winning the hackathon.</a>
+									</p>
+									<p>The app uses Cordova to access native functions on both iOS and Android, Ruby
+										on Rails for the backend, and React.js, Backbone, and Zurb Foundation for the frontend.
+									</p>
+								</div>
+								<div class="small-12 columns centered">
+									<img src="../img/lnsk.png">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="content white row" id="senior-content">
+						<div class="small-12 columns">
+							<h1>Senior Design Project</h1>
+							<div class="row">
+								<div class="small-12 columns">
+									<p>In my senior year, I helped design and build an Arduino-powered LED array along with
+										two classmates. The device was designed to sit under a 96 well plate and allow
+										researchers to run synthetic biology experiments focused on optogenetics in the Khalil
+										Lab at BU.
+									</p>
+									<p>I used Altium Designer to design the printed circuit board which held all the LEDs and
+										the circuit. It was connected to Arduino, which had a Bluetooth Low Energy module to
+										communicate with an Android app.
+									</p>
+								</div>
+								<div class="small-12 columns centered">
+									<img src="../img/senior2.jpg">
+								</div>
+							</div>
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 
 
@@ -66,16 +228,16 @@
 
 		//adjust footer size on resize
 		$("li").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend MSTransitionEnd', 
-    		function() {
-        	$(document).foundation('equalizer','reflow');
-    });
-    $(document).foundation({
-	    tab: {
-	      callback : function (tab) {
-	        $(document).foundation('equalizer','reflow');
-	      }
-	    }
-	  });
+			function() {
+				$(document).foundation('equalizer','reflow');
+			});
+		$(document).foundation({
+			tab: {
+				callback : function (tab) {
+					$(document).foundation('equalizer','reflow');
+				}
+			}
+		});
 
 		//set up linkedin widget
 		$( document ).ready(function() {
@@ -83,6 +245,6 @@
 			//initial footer height
 			$('#filler').height( $('#tabs-row').height() - $('#tab-squares').height());
 		})
-	</script>
-</body>
-</html>
+		</script>
+	</body>
+	</html>
